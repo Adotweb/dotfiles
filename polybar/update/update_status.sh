@@ -6,4 +6,4 @@ if [[ -n /tmp/polybar-script-output ]]; then
 
 fi
 
-echo "status: $(cat /tmp/polybar-script-output)"
+echo "check: $(cat /tmp/polybar-script-output)"
