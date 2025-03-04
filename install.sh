@@ -1,1 +1,1 @@
-
+cp -r polybar ~/.config/
