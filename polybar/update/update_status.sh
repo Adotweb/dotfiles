@@ -6,9 +6,4 @@ if [[ -n /tmp/polybar-script-output ]]; then
 
 fi
 
-if [[ "$(cat /tmp/polybar-script-output)" == "updating" ]]; then
-	echo "󰔪 "
-else 
-	echo "󱊪 "
-fi
-
+echo "status: $(cat /tmp/polybar-script-output)"

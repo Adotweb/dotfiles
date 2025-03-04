@@ -2,23 +2,33 @@
 
 echo "updating" > /tmp/polybar-script-output
 
-
+sleep 1
 
 cd ~/Document/projects/dotfiles
 
-#check if updates-if yes upload them
-if [[ "$(git status | grep)" == "" ]]; then
-	#no local updates this means that we need to pull the latest version
+if [[ "$(git status | grep modified)" == "" ]]; then
+	
+	echo "no local updates" > /tmp/polybar-script-output
 
-	git pull	
-else 
-	#updates
+	git pull
+
+	sleep 1
+
+else
+
+	
 	git add .
-	git commit -m "update [$(date)]"
+	git commit -m "$(date) - update"
+	
 	git push -u origin master
+
+	echo "local updates so we push!" > /tmp/polybar-script-output
+	sleep 1
 fi
 
-# apply the changes by moving the config files to their destination
-./install.sh
+
+sh ./install.sh
+
+
 
 echo "" > /tmp/polybar-script-output
