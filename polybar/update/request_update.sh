@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "supdating" > /tmp/polybar-script-output
+echo "updating" > /tmp/polybar-script-output
 
 sleep 1
 
@@ -31,4 +31,4 @@ sh ./install.sh
 
 
 
-echo "" > /tmp/polybar-script-output
+echo "up to date" > /tmp/polybar-script-output
