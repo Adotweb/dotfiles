@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "updating" > /tmp/polybar-script-output
+echo "supdating" > /tmp/polybar-script-output
 
 sleep 1
 
